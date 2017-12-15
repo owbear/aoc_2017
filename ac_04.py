@@ -68,7 +68,7 @@ def test_04b():
     ]
     for data, expected in tests:
         result = calc_is_valid_04b(data)
-        assert result == expected, f"calc_is_valid_04b({data}): Expected {expected} but got {result}"
+        assert result == expected, f"calc_steps_04b({data}): Expected {expected} but got {result}"
 
 
 puzzle_input_04 = io.StringIO("""bdwdjjo avricm cjbmj ran lmfsom ivsof
