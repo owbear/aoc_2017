@@ -60,7 +60,7 @@ def test_03a():
         assert result == expected, f"calc_03a({data}): Expected {expected} but got {result}"
 
 
-def sum_neighbours(values, n, i, j):
+def sum_neighbours(values, i, j):
     offsets = [
         (-1, -1), (0, -1), (1, -1),
         (-1, 0),           (1, 0),
@@ -75,7 +75,7 @@ def calc_03b(data):
     values = {(0, 0): 1}
     walk = generate_walk()
     for n, i, j in walk:
-        neighbours = sum_neighbours(values, n, i, j)
+        neighbours = sum_neighbours(values, i, j)
         if neighbours > data:
             return neighbours
         values[(i, j)] = neighbours
